@@ -3,7 +3,9 @@ import Link from "next/link";
 import { AppBadges } from "@/components/AppBadges";
 import { Demo } from "@/components/Demo";
 import { Escalation } from "@/components/Escalation";
+import { Features } from "@/components/Features";
 import { Footer } from "@/components/Footer";
+import { HeroVideo } from "@/components/HeroVideo";
 import { JoinForm } from "@/components/JoinForm";
 import { REPO_URL } from "@/lib/project";
 import { Nav } from "@/components/Nav";
@@ -20,7 +22,9 @@ export default function Home() {
 
       <main id="main">
         <div className="hero" id="top">
-          <section className="hero-copy">
+          <div className="hero-stage">
+            <HeroVideo />
+            <section className="hero-copy">
             <h1>Take two {token.ticker} and call me in the morning</h1>
             <p className="lede">
               {token.ticker} is a memecoin launching with MEDIC AI, the health assistant we're building to explain
@@ -36,7 +40,8 @@ export default function Home() {
             </div>
             <AppBadges />
             <p className="status">Launch date to be announced. Not medicine. Not financial advice.</p>
-          </section>
+            </section>
+          </div>
 
           <section className="tiles" aria-label="Concept previews of MEDIC AI">
             <figure className="tile tile-triage">
@@ -81,6 +86,8 @@ export default function Home() {
           </section>
           <p className="tiles-note">Concept previews with sample data, not a working product. Stock photos.</p>
         </div>
+
+        <Features />
 
         <Escalation />
 

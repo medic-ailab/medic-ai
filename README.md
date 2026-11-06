@@ -24,7 +24,7 @@ npm run deploy  # publishes out/ to Cloudflare
 
 | Path | What it holds |
 | --- | --- |
-| `app/` | The pages: home, `/demo` and `/review` |
+| `app/` | The pages: home, `/demo`, `/vision` and `/review` |
 | `components/` | Shared parts such as the demo chat and nav |
 | `lib/demo.ts` | The demo's scripted medical answers |
 | `lib/token.ts` | Token details, all still to be announced |
@@ -38,7 +38,7 @@ Pull requests are welcome. Changes to medical wording must follow [CLINICAL_REVI
 
 ## Licence
 
-The code is licensed under [Apache-2.0](LICENSE). This doesn't cover the MEDIC AI name or logo, which you can't use in a way that suggests your project is ours or endorsed by us. Photos are listed in [IMAGE-CREDITS.md](IMAGE-CREDITS.md).
+The code is licensed under [Apache-2.0](LICENSE). This doesn't cover the MEDIC AI name or logo, which you can't use in a way that suggests your project is ours or endorsed by us. Photos and video keep their own licences, listed in [IMAGE-CREDITS.md](IMAGE-CREDITS.md).
 
 ## Risks
 

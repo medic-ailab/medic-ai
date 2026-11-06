@@ -10,6 +10,7 @@ export function Nav({ cta = { href: "/demo", label: "Try the demo" } }: { cta?: 
       </Link>
       <nav aria-label="Main">
         <Link href="/demo">Demo</Link>
+        <Link href="/vision">Vision</Link>
         <Link href="/#label">The label</Link>
         <Link href="/review">For doctors</Link>
         <Link href="/#join">Early list</Link>
