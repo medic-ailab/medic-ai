@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "serve": "python3 -m http.server 3000 --directory out",
-    "deploy": "npx wrangler@latest pages deploy out --project-name medic-ai --branch main",
+    "deploy": "npx wrangler@latest deploy",
     "test": "node --test lib/demo.test.ts"
   },
   "dependencies": {

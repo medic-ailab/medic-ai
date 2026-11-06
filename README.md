@@ -17,6 +17,7 @@ npm install
 npm run dev     # http://localhost:3000
 npm test        # checks the demo's answers
 npm run build   # builds the static site into out/
+npm run deploy  # publishes out/ to Cloudflare
 ```
 
 ## Where things are
