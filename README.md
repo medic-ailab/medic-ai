@@ -30,13 +30,13 @@ To collect early-list sign-ups, set `NEXT_PUBLIC_WAITLIST_ENDPOINT` to a URL tha
 
 ## Contributing
 
-This is a private repository. Changes to medical wording must follow [CLINICAL_REVIEW.md](CLINICAL_REVIEW.md).
+Changes to medical wording must follow [CLINICAL_REVIEW.md](CLINICAL_REVIEW.md).
 
 To open clinician reviews on the site, set `NEXT_PUBLIC_REVIEW_FORM_URL` to your review form's address.
 
 ## Licence
 
-The code was published under [Apache-2.0](LICENSE) for a short time. The MEDIC AI name and logo aren't covered by that licence. Photos are listed in [IMAGE-CREDITS.md](IMAGE-CREDITS.md).
+The code is licensed under [Apache-2.0](LICENSE). This doesn't cover the MEDIC AI name or logo, which you can't use in a way that suggests your project is ours or endorsed by us. Photos are listed in [IMAGE-CREDITS.md](IMAGE-CREDITS.md).
 
 ## Risks
 
