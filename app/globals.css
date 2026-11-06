@@ -561,3 +561,39 @@ input[aria-invalid="true"] { box-shadow: inset 0 0 0 2px var(--loud); }
 @media (max-width: 1000px) and (min-width: 861px) {
   .nav nav { gap: 16px; }
 }
+
+/* Hero scroll animation: the video stays pinned and slowly zooms, the words lift away,
+   the tiles glide up over it at staggered speeds, then the video fades out. */
+.hero-scroll { --p: 0; --stage-top: 0px; }
+.hero-scroll .hero-stage { position: sticky; top: var(--stage-top); min-height: 100vh; min-height: 100svh; margin-bottom: 0; z-index: 0; }
+.hero-scroll .hero-video { transform: scale(calc(1 + var(--p) * .28)); opacity: calc(1 - max(0, var(--p) - .55) * 2.23); will-change: transform, opacity; }
+.hero-scroll .hero-stage::after { opacity: calc(1 - max(0, var(--p) - .55) * 2.23); }
+.hero-scroll .hero-copy h1 { transform: translateY(calc(var(--p) * -16vh)) scale(calc(1 - var(--p) * .14)); opacity: calc(1 - var(--p) * 1.7); will-change: transform, opacity; }
+.hero-scroll .hero-copy .lede,
+.hero-scroll .hero-copy .hero-actions,
+.hero-scroll .hero-copy .app-badges,
+.hero-scroll .hero-copy .status { transform: translateY(calc(var(--p) * -9vh)); opacity: calc(1 - var(--p) * 2.6); }
+.hero-scroll .hero-stage-gone { visibility: hidden; }
+.hero-scroll .tiles, .hero-scroll .tiles-note { position: relative; z-index: 1; }
+.hero-scroll .tiles { margin-top: clamp(16px, 3vw, 40px); }
+.hero-scroll .tile { animation: none; transform: translateY(calc((1 - min(1, var(--p) * 1.5)) * var(--tile-offset, 80px))); will-change: transform; }
+.hero-scroll .tile-triage { --tile-offset: 70px; }
+.hero-scroll .tile-reminder { --tile-offset: 170px; }
+.hero-scroll .tile-result { --tile-offset: 110px; }
+.hero-scroll .tile-tracker { --tile-offset: 210px; }
+.hero-scroll .tiles-note { opacity: calc(max(0, var(--p) - .6) * 2.5); }
+@media (max-width: 560px) {
+  .hero-scroll .tile { --tile-offset: 40px; }
+}
+
+/* Synthetic intelligence plan on the vision page */
+.vision-synthetic { background: var(--sky); padding: clamp(56px, 8vw, 110px) max(var(--gutter), calc((100% - var(--page)) / 2 + var(--gutter))); }
+.vision-synthetic h2 { color: var(--cloud); max-width: 14em; margin-bottom: clamp(24px, 4vw, 44px); }
+.synthetic-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px clamp(32px, 5vw, 72px); }
+.synthetic-grid > div { padding-top: 14px; border-top: 3px solid var(--ink); }
+.synthetic-grid h3 { margin: 0 0 6px; font: 800 clamp(1.875rem, 3vw, 2.5rem)/1.05 var(--display); }
+.synthetic-grid p { max-width: 32em; font-size: clamp(1.125rem, 1.5vw, 1.3125rem); line-height: 1.4; }
+.synthetic-status { max-width: 42em; margin-top: clamp(24px, 4vw, 40px); font-weight: 700; }
+@media (max-width: 720px) {
+  .synthetic-grid { grid-template-columns: minmax(0, 1fr); }
+}

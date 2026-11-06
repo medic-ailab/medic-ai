@@ -1,6 +1,10 @@
 {
   "name": "medic-ai",
   "compatibility_date": "2026-11-06",
+  "routes": [
+    { "pattern": "medicai.health", "custom_domain": true },
+    { "pattern": "www.medicai.health", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./out",
     "not_found_handling": "404-page"

@@ -160,6 +160,24 @@ export default function VisionPage() {
           </p>
         </section>
 
+        <section className="vision-synthetic" aria-labelledby="synthetic-title">
+          <h2 id="synthetic-title">Our long-term plan: synthetic intelligence</h2>
+          <div className="synthetic-grid">
+            <div>
+              <h3>Today's AI</h3>
+              <p>Relies on statistical pattern matching, big data and predicting the next word or value.</p>
+            </div>
+            <div>
+              <h3>Synthetic intelligence</h3>
+              <p>Aims to recreate the underlying mechanisms, architecture and processes of biological intelligence.</p>
+            </div>
+          </div>
+          <p className="synthetic-status">
+            We haven't built this yet, and the current demo is scripted. Whatever approach we use, it has to pass clinical
+            safety testing and review before it reaches anyone.
+          </p>
+        </section>
+
         <section className="vision-section" aria-labelledby="roadmap-title">
           <h2 id="roadmap-title">How we get there</h2>
           <ol className="roadmap">

@@ -5,6 +5,7 @@ import { Demo } from "@/components/Demo";
 import { Escalation } from "@/components/Escalation";
 import { Features } from "@/components/Features";
 import { Footer } from "@/components/Footer";
+import { HeroScroll } from "@/components/HeroScroll";
 import { HeroVideo } from "@/components/HeroVideo";
 import { JoinForm } from "@/components/JoinForm";
 import { REPO_URL } from "@/lib/project";
@@ -24,6 +25,7 @@ export default function Home() {
         <div className="hero" id="top">
           <div className="hero-stage">
             <HeroVideo />
+            <HeroScroll />
             <section className="hero-copy">
             <h1>Take two {token.ticker} and call me in the morning</h1>
             <p className="lede">
