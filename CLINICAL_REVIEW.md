@@ -18,6 +18,16 @@ Reviews are public. Don't include patient details, and don't post a registration
 4. A verified clinician who didn't write the suggestion approves the wording.
 5. The change is merged and the answer is marked as reviewed, with the reviewer's role, specialty, country and date. The reviewer's name is shown only if they agree.
 
+## How reviews train the agent
+
+MEDIC AI is being built as an AI agent. **It hasn't been trained yet, and the current demo is scripted.** When it's trained:
+
+- Only reviews approved through the steps above are used. Unverified suggestions aren't.
+- Reviewers agree to this use on the review form.
+- Patient details are never used as training material.
+- Each new version of the agent must pass tests on danger signs and emergency answers before release.
+- Training on clinician reviews doesn't count as clinical validation or regulatory approval. Those are separate steps.
+
 ## Rules for medical content
 
 - Danger signs always come first. An emergency answer tells people to call their local emergency number before anything else.

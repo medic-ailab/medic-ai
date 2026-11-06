@@ -2,7 +2,7 @@
 
 MEDIC AI is a health assistant in development, launching with the `$MEDIC` memecoin. It's being built to explain symptoms and test results in plain words, and to escalate severe cases to human consultations.
 
-This repository holds the launch site and a scripted demo. **The demo doesn't use an AI model, and it isn't medical advice.** Nothing typed into it leaves the browser. If this might be an emergency, call your local emergency number now.
+This repository holds the launch site and a scripted demo. Verified reviews from doctors and medical practitioners will be used to train the agent. **The demo is scripted for now: it doesn't use an AI model, and it isn't medical advice.** Nothing typed into it leaves the browser. If this might be an emergency, call your local emergency number now.
 
 ## Are you a doctor or medical practitioner?
 

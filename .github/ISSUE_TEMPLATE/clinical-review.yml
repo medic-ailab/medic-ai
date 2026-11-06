@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping. **This form is public.** Don't include patient details, and don't post your registration number here. We'll arrange to confirm your registration privately.
+        Thanks for helping. **This form is public.** Don't include patient details, and don't post your registration number here. We'll arrange to confirm your registration privately. Approved reviews will be used to train the MEDIC AI agent.
   - type: dropdown
     id: role
     attributes:
@@ -74,4 +74,6 @@ body:
         - label: I'm a registered healthcare professional.
           required: true
         - label: I haven't included any patient details.
+          required: true
+        - label: I agree that my review can be used to train the MEDIC AI agent.
           required: true

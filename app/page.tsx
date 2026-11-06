@@ -109,8 +109,8 @@ export default function Home() {
             <div>
               <h2>Open code. Real doctors invited.</h2>
               <p>
-                The code is open source, and we're asking doctors and medical practitioners to check every answer. No
-                answer has been clinically reviewed yet.
+                The code is open source, and we're asking doctors and medical practitioners to check every answer. Their
+                verified reviews will train the MEDIC AI agent. No answer has been clinically reviewed yet.
               </p>
             </div>
             <div className="open-actions">

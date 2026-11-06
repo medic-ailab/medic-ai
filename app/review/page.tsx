@@ -17,8 +17,9 @@ export default function ReviewPage() {
         <header className="review-head">
           <h1>Doctors, check our answers</h1>
           <p>
-            MEDIC AI is open source, and we want doctors and medical practitioners to correct it. No answer below has
-            been clinically reviewed yet, so tell us what's wrong, unsafe or missing.
+            MEDIC AI is an open source AI agent in development, and verified reviews from doctors and medical
+            practitioners will train it. No answer below has been clinically reviewed yet, so tell us what's wrong,
+            unsafe or missing.
           </p>
           <div className="review-actions">
             <a className="btn btn-loud" href={reviewIssueUrl()}>
@@ -41,8 +42,8 @@ export default function ReviewPage() {
               <p>We check your professional registration privately before your advice changes an answer.</p>
             </li>
             <li>
-              <h2>The answer gets updated</h2>
-              <p>Approved changes go into the open code, and the answer shows that it has been reviewed.</p>
+              <h2>The agent learns from it</h2>
+              <p>Approved changes go into the open code and will be used to train the agent. The answer shows that it has been reviewed.</p>
             </li>
           </ol>
 
