@@ -7,8 +7,10 @@ import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 
 export const metadata: Metadata = {
-  title: "MEDIC AI demo",
-  description: "Try the scripted MEDIC AI demo. Mobile apps coming soon. Not medical advice.",
+  title: "Try the demo",
+  description: "See how the MEDIC AI health assistant would sort what's urgent from what can wait, in a scripted demo. Mobile apps coming soon. Not medical advice.",
+  alternates: { canonical: "/demo/" },
+  openGraph: { url: "/demo/", title: "Try the MEDIC AI demo" },
 };
 
 export default function DemoPage() {

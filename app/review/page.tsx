@@ -5,7 +5,9 @@ import { reviewableAnswers } from "@/lib/demo";
 import { REPO_URL, reviewIssueUrl } from "@/lib/project";
 
 export const metadata: Metadata = {
-  title: "Review MEDIC AI's answers",
+  title: "Doctors, review our answers",
+  alternates: { canonical: "/review/" },
+  openGraph: { url: "/review/", title: "Doctors, review MEDIC AI's answers" },
   description: "Doctors and medical practitioners can check and correct every answer in the MEDIC AI demo. No answer has been clinically reviewed yet.",
 };
 

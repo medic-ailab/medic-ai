@@ -5,8 +5,10 @@ import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 
 export const metadata: Metadata = {
-  title: "The MEDIC AI vision",
-  description: "What we plan to build: the MEDIC AI mobile app, a wearable health band and a phased roadmap. None of it is available yet.",
+  title: "Our vision",
+  description: "What we plan to build: the MEDIC AI mobile app, a wearable health band, a phased roadmap and our long-term plan for synthetic intelligence. None of it is available yet.",
+  alternates: { canonical: "/vision/" },
+  openGraph: { url: "/vision/", title: "The MEDIC AI vision" },
 };
 
 const APP_FEATURES = [
