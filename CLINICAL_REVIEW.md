@@ -6,13 +6,15 @@ MEDIC AI's answers can affect someone's health, so medical content changes follo
 
 ## How to send a review
 
-The review form isn't open yet. When it is, the `/review` page on the site will link to it. Don't include patient details in a review.
+Registered healthcare professionals can use the [clinical review form](https://github.com/medic-ailab/medic-ai/issues/new?template=clinical-review.yml), or start from the answer they want to change at `/review` on the site.
+
+Reviews are public. Don't include patient details, and don't post a registration number.
 
 ## How advice becomes an answer
 
 1. A clinician submits a review.
 2. A maintainer confirms the clinician's professional registration privately, using the official registry for their country.
-3. A maintainer proposes the change in a pull request that records the review.
+3. A maintainer proposes the change in a pull request that links to the review.
 4. A verified clinician who didn't write the suggestion approves the wording.
 5. The change is merged and the answer is marked as reviewed, with the reviewer's role, specialty, country and date. The reviewer's name is shown only if they agree.
 
