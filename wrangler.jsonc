@@ -1,6 +1,7 @@
 {
   "name": "medic-ai",
   "compatibility_date": "2026-11-06",
+  "workers_dev": true,
   "routes": [
     { "pattern": "medicai.health", "custom_domain": true },
     { "pattern": "www.medicai.health", "custom_domain": true }
