@@ -5,7 +5,6 @@ import { Demo } from "@/components/Demo";
 import { Escalation } from "@/components/Escalation";
 import { Footer } from "@/components/Footer";
 import { JoinForm } from "@/components/JoinForm";
-import { REPO_URL } from "@/lib/project";
 import { Nav } from "@/components/Nav";
 import { token } from "@/lib/token";
 
@@ -107,19 +106,16 @@ export default function Home() {
 
           <div className="open-band glass">
             <div>
-              <h2>Open code. Real doctors invited.</h2>
+              <h2>Real doctors invited.</h2>
               <p>
-                The code is open source, and we're asking doctors and medical practitioners to check every answer. No
-                answer has been clinically reviewed yet.
+                We want doctors and medical practitioners to check every answer. No answer has been clinically reviewed
+                yet, and reviews open soon.
               </p>
             </div>
             <div className="open-actions">
               <Link className="btn btn-loud" href="/review">
-                Review the answers
+                See the answers
               </Link>
-              <a className="btn btn-quiet" href={REPO_URL}>
-                See the code on GitHub
-              </a>
             </div>
           </div>
         </section>

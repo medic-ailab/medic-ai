@@ -403,7 +403,7 @@ input[aria-invalid="true"] { box-shadow: inset 0 0 0 2px var(--loud); }
   .track-node { flex: none; }
 }
 
-/* Open source band on the home page */
+/* Doctors band on the home page */
 .open-band { grid-column: 1 / -1; border-radius: 28px; padding: clamp(20px, 3vw, 32px); display: grid; grid-template-columns: minmax(0, 1.6fr) auto; gap: 20px 40px; align-items: center; }
 .open-band h2 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 10px; color: var(--ink); }
 .open-band p { max-width: 38em; font-weight: 500; }
@@ -449,3 +449,7 @@ input[aria-invalid="true"] { box-shadow: inset 0 0 0 2px var(--loud); }
 }
 .btn-quiet-line { background: none; color: var(--ink); box-shadow: inset 0 0 0 2px var(--ink); }
 .btn-quiet-line:hover { background: var(--sky-tint); }
+.answer-plain { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); }
+@media (max-width: 960px) {
+  .answer-plain { grid-template-columns: minmax(0, 1fr); }
+}

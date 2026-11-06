@@ -1,10 +1,2 @@
-export const REPO_URL = "https://github.com/Dipraise1/medic-ai";
-
-export function reviewIssueUrl(topic?: string, answer?: string) {
-  const params = new URLSearchParams({ template: "clinical-review.yml" });
-  if (topic && answer) {
-    params.set("title", `Clinical review: ${topic}`);
-    params.set("answer", `${topic}\n\n${answer}`);
-  }
-  return `${REPO_URL}/issues/new?${params}`;
-}
+// Where clinicians send reviews. While it's unset, the site says reviews open soon.
+export const REVIEW_FORM_URL = process.env.NEXT_PUBLIC_REVIEW_FORM_URL ?? "";

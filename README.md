@@ -4,10 +4,6 @@ MEDIC AI is a health assistant in development, launching with the `$MEDIC` memec
 
 This repository holds the launch site and a scripted demo. **The demo doesn't use an AI model, and it isn't medical advice.** Nothing typed into it leaves the browser. If this might be an emergency, call your local emergency number now.
 
-## Are you a doctor or medical practitioner?
-
-We need your help. No answer has been clinically reviewed yet. Use the [clinical review form](https://github.com/Dipraise1/medic-ai/issues/new?template=clinical-review.yml) to correct an answer or make a recommendation. [CLINICAL_REVIEW.md](CLINICAL_REVIEW.md) explains what happens next.
-
 ## Run it
 
 You'll need Node.js 24 or newer.
@@ -28,18 +24,20 @@ npm run deploy  # publishes out/ to Cloudflare
 | `components/` | Shared parts such as the demo chat and nav |
 | `lib/demo.ts` | The demo's scripted medical answers |
 | `lib/token.ts` | Token details, all still to be announced |
-| `lib/project.ts` | The repository link used across the site |
+| `lib/project.ts` | The link for clinician reviews |
 
 To collect early-list sign-ups, set `NEXT_PUBLIC_WAITLIST_ENDPOINT` to a URL that accepts a JSON POST of `{ "email": "..." }`. Without it, the form says that sign-ups aren't open.
 
 ## Contributing
 
-Pull requests are welcome. Changes to medical wording must follow [CLINICAL_REVIEW.md](CLINICAL_REVIEW.md).
+This is a private repository. Changes to medical wording must follow [CLINICAL_REVIEW.md](CLINICAL_REVIEW.md).
+
+To open clinician reviews on the site, set `NEXT_PUBLIC_REVIEW_FORM_URL` to your review form's address.
 
 ## Licence
 
-The code is licensed under [Apache-2.0](LICENSE). This doesn't cover the MEDIC AI name or logo, which you can't use in a way that suggests your project is ours or endorsed by us. Photos are listed in [IMAGE-CREDITS.md](IMAGE-CREDITS.md).
+The code was published under [Apache-2.0](LICENSE) for a short time. The MEDIC AI name and logo aren't covered by that licence. Photos are listed in [IMAGE-CREDITS.md](IMAGE-CREDITS.md).
 
 ## Risks
 
-`$MEDIC` is a memecoin. It has no intrinsic value and no promised return, and its price can fall to zero. Open source code and clinical review don't make it a safer purchase. Nothing here is financial advice.
+`$MEDIC` is a memecoin. It has no intrinsic value and no promised return, and its price can fall to zero. Clinical review doesn't make it a safer purchase. Nothing here is financial advice.
