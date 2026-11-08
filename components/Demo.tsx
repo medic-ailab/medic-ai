@@ -105,6 +105,7 @@ export function Demo({ variant }: { variant: "preview" | "full" }) {
           placeholder="Ask about a symptom or test result"
           maxLength={200}
           autoComplete="off"
+          enterKeyHint="send"
         />
         <button type="submit" className="btn btn-loud" disabled={thinking || !draft.trim()}>
           Ask

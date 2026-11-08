@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Sofia_Sans, Sofia_Sans_Extra_Condensed } from "next/font/google";
+import { Sofia_Sans } from "next/font/google";
 import "./globals.css";
 
 const body = Sofia_Sans({ subsets: ["latin"], variable: "--font-body" });
-const display = Sofia_Sans_Extra_Condensed({ subsets: ["latin"], weight: ["700", "800", "900"], variable: "--font-display" });
+
 
 const SITE_URL = "https://medicai.health";
 const DESCRIPTION =
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = { themeColor: "#05052b" };
+export const viewport: Viewport = { themeColor: "#060623" };
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -58,7 +58,7 @@ const structuredData = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${body.variable} ${display.variable}`}>
+    <html lang="en" className={body.variable}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         {children}

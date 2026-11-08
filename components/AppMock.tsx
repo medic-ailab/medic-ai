@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { respond } from "@/lib/demo";
 
 const TABS = ["Home", "Chat", "Check", "Health", "Records"] as const;
@@ -9,13 +9,14 @@ const QUESTION = "I've had a fever and a sore throat for two days";
 
 export function AppMock() {
   const [tab, setTab] = useState<Tab>("Home");
+  const tabButtons = useRef<(HTMLButtonElement | null)[]>([]);
   const reply = respond(QUESTION);
 
   return (
     <div className="phone">
       <div className="phone-screen">
         <p className="phone-brand">MEDIC AI</p>
-        <div className="phone-body" id="phone-panel" role="tabpanel" aria-label={tab}>
+        <div className="phone-body" id="phone-panel" role="tabpanel" aria-labelledby={`phone-tab-${tab}`} tabIndex={0}>
           {tab === "Home" && (
             <>
               <h3>How can we help you feel better?</h3>
@@ -75,8 +76,14 @@ export function AppMock() {
           )}
         </div>
         <div className="phone-tabs" role="tablist" aria-label="App sections">
-          {TABS.map((name) => (
-            <button key={name} type="button" role="tab" aria-selected={tab === name} aria-controls="phone-panel" onClick={() => setTab(name)}>
+          {TABS.map((name, index) => (
+            <button key={name} ref={(element) => { tabButtons.current[index] = element; }} id={`phone-tab-${name}`} type="button" role="tab" tabIndex={tab === name ? 0 : -1} aria-selected={tab === name} aria-controls="phone-panel" onClick={() => setTab(name)} onKeyDown={(event) => {
+              const next = event.key === "ArrowRight" ? (index + 1) % TABS.length : event.key === "ArrowLeft" ? (index + TABS.length - 1) % TABS.length : event.key === "Home" ? 0 : event.key === "End" ? TABS.length - 1 : -1;
+              if (next < 0) return;
+              event.preventDefault();
+              setTab(TABS[next]);
+              tabButtons.current[next]?.focus();
+            }}>
               {name}
             </button>
           ))}

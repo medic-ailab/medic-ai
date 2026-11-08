@@ -53,14 +53,21 @@ export function JoinForm() {
           id="email"
           type="email"
           autoComplete="email"
+          inputMode="email"
+          enterKeyHint="send"
+          autoCapitalize="none"
+          spellCheck={false}
           placeholder="name@example.com"
           value={email}
-          onChange={(event) => setEmail(event.target.value)}
+          onChange={(event) => {
+            setEmail(event.target.value);
+            if (invalid) { setInvalid(false); setMessage(""); }
+          }}
           aria-invalid={invalid || undefined}
           aria-describedby="form-hint form-message"
         />
         <button className="btn btn-loud" type="submit" disabled={sending}>
-          Join the early list
+          {sending ? "Joining…" : "Join the early list"}
         </button>
       </div>
       <p className="hint" id="form-hint">
